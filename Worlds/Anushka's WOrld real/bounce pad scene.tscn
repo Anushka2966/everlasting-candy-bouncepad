@@ -1,26 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://de6mmwnhm1ch4"]
+[gd_scene load_steps=4 format=3 uid="uid://bl7ohnmjlm0g4"]
 
-[ext_resource type="Script" path="res://Worlds/World One/bounce pad scene.gd" id="1_3ilm3"]
-[ext_resource type="Texture2D" uid="uid://doixfq04j7vl1" path="res://Image/bouncepadsprite.png" id="1_iuiiu"]
+[ext_resource type="Script" path="res://Worlds/World One/bounce pad scene.gd" id="1_byruy"]
+[ext_resource type="Texture2D" uid="uid://doixfq04j7vl1" path="res://Image/bouncepadsprite.png" id="2_cmj6a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iybdc"]
-size = Vector2(175, 22)
+size = Vector2(174, 22)
 
 [node name="BouncePadScene" type="Node2D"]
 position = Vector2(-228, -186)
-script = ExtResource("1_3ilm3")
+script = ExtResource("1_byruy")
 
 [node name="Bouncepadsprite" type="Sprite2D" parent="."]
-position = Vector2(-13, -68)
+position = Vector2(-12, -68)
 scale = Vector2(0.19898, 0.223437)
-texture = ExtResource("1_iuiiu")
+texture = ExtResource("2_cmj6a")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-13, -115)
+position = Vector2(-12, -115)
 shape = SubResource("RectangleShape2D_iybdc")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
